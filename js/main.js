@@ -9,10 +9,7 @@ navBarToggle.addEventListener('click', function () {
     
 });
 
-
-
-
-
-
-
-
+// preloader
+     $(window).on("load",function(){
+       $(".loader-wrapper").fadeOut(4000);
+    });
