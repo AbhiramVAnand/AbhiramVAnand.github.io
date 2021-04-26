@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 640px) {
+    .container {}
+    .content {
+        height: 80%;
+        width: 100%;
+        padding-bottom: 3%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("bg3.jpeg");
+    }
+    .nav ul {
+        display: none;
+    }
+    .nav #nam {
+        font-size: 250%;
+        font-weight: 700;
+        margin-left: 7%;
+        color: #bad1ee;
+    }
+    .nav #blo {
+        float: right;
+        margin-top: 3%;
+        margin-right: 7%;
+        font-size: 130%;
+    }
+    .nav #blo a {
+        text-decoration: none;
+        color: #bad1ee;
+    }
+    .descp {
+        margin: 60% 0 0 10%;
+    }
+    .descp #hello {
+        font-size: 200%;
+    }
+    .descp #name {
+        font-size: 350%;
+        font-weight: 900;
+    }
+    .descp #con {
+        padding: 3%;
+        width: 30%;
+        background-color: #bad1ee;
+        display: none;
+    }
+    .descp #con a {
+        text-decoration: none;
+        color: orange;
+    }
+    .social {
+        color: rgb(154, 209, 226);
+        text-align: center;
+        padding: 5% 5%;
+        font-size: 200%;
+        background-color: #123342;
+    }
+    .social i {
+        padding: 1%;
+    }
+    .social a {
+        text-decoration: none;
+        color: rgb(154, 209, 226);
+    }
+    .about {
+        padding: 12% 10%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("bg5.jpeg");
+    }
+    .about #ame {
+        font-size: 200%;
+        font-weight: 600;
+    }
+    .about p {
+        text-align: left;
+        font-size: 110%;
+    }
+    .projects {
+        padding: 10%;
+        background-color: #123342;
+        display: none;
+    }
+}
