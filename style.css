@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 640px) {
+    .container {}
+    .content {
+        height: 80vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("bg3.jpeg");
+    }
+    .nav ul {
+        display: none;
+    }
+    .nav #nam {
+        font-size: 250%;
+        font-weight: 700;
+        margin-left: 7%;
+        color: #d2d2d3;
+    }
+    .nav #blo {
+        float: right;
+        margin-top: 3%;
+        margin-right: 7%;
+        font-size: 130%;
+    }
+    .nav #blo a {
+        text-decoration: none;
+        color: #dddddd;
+    }
+    .social {
+        height: 5vh;
+        color: black;
+        text-align: center;
+        padding: 10% 5%;
+        font-size: 200%;
+        background-color: #336699;
+    }
+    .social i {
+        padding: 1%;
+    }
+    .social a {
+        text-decoration: none;
+        color: #1e1f1e;
+    }
+    .descp {
+        margin: 45vh 0 0 10%;
+    }
+    .descp #hello {
+        font-size: 200%;
+    }
+    .descp #name {
+        font-size: 350%;
+        font-weight: 900;
+    }
+    .descp #con {
+        padding: 3%;
+        width: 30%;
+        background-color: white;
+        display: none;
+    }
+    .descp #con a {
+        text-decoration: none;
+        color: orange;
+    }
+    .about {
+        height: 35vh;
+        background-color: #3f3f3f;
+        padding: 12% 10%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("bg5.jpeg");
+    }
+    .about #ame {
+        font-size: 200%;
+        font-weight: 600;
+    }
+    .about p {
+        text-align: left;
+        font-size: 110%;
+    }
+    .skill {}
+}
