@@ -9,8 +9,9 @@ body {
 @media screen and (max-width: 640px) {
     .container {}
     .content {
-        height: 80vh;
+        height: 80%;
         width: 100%;
+        padding-bottom: 3%;
         background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("bg3.jpeg");
     }
     .nav ul {
@@ -20,7 +21,7 @@ body {
         font-size: 250%;
         font-weight: 700;
         margin-left: 7%;
-        color: #d2d2d3;
+        color: #bad1ee;
     }
     .nav #blo {
         float: right;
@@ -30,25 +31,10 @@ body {
     }
     .nav #blo a {
         text-decoration: none;
-        color: #dddddd;
-    }
-    .social {
-        height: 5vh;
-        color: black;
-        text-align: center;
-        padding: 10% 5%;
-        font-size: 200%;
-        background-color: #336699;
-    }
-    .social i {
-        padding: 1%;
-    }
-    .social a {
-        text-decoration: none;
-        color: #1e1f1e;
+        color: #bad1ee;
     }
     .descp {
-        margin: 45vh 0 0 10%;
+        margin: 60% 0 0 10%;
     }
     .descp #hello {
         font-size: 200%;
@@ -60,16 +46,28 @@ body {
     .descp #con {
         padding: 3%;
         width: 30%;
-        background-color: white;
+        background-color: #bad1ee;
         display: none;
     }
     .descp #con a {
         text-decoration: none;
         color: orange;
     }
+    .social {
+        color: rgb(154, 209, 226);
+        text-align: center;
+        padding: 5% 5%;
+        font-size: 200%;
+        background-color: #123342;
+    }
+    .social i {
+        padding: 1%;
+    }
+    .social a {
+        text-decoration: none;
+        color: rgb(154, 209, 226);
+    }
     .about {
-        height: 35vh;
-        background-color: #3f3f3f;
         padding: 12% 10%;
         background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("bg5.jpeg");
     }
@@ -81,5 +79,4 @@ body {
         text-align: left;
         font-size: 110%;
     }
-    .skill {}
 }
