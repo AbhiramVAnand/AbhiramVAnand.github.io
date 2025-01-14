@@ -1,35 +1,36 @@
 {{ define "main" }}
-    {{ $paginator := .Paginate .Data.Pages }}
+<section class="container mx-auto py-12 px-6 md:px-0 text-center">
+  <img src="https://avatars.githubusercontent.com/u/75875359?v=4" alt="Your Avatar"
+      class="rounded-full w-48 h-48 mx-auto mb-6 border-4 border-gray-700">
+  <h1 class="text-4xl md:text-5xl font-bold font-mono mb-4">Abhiram V</h1>
+  <p class="text-lg md:text-xl mb-2 text-text-secondary">Software Engineer</p>
+  <p class="text-sm md:text-lg mb-4 text-text-secondary">Android | Robotics | Frontend </p>
 
-    <main class="posts">
-        <h1>{{ .Title }}</h1>
+  <div class="flex justify-center space-x-6">
+      <a href="https://github.com/AbhiramVAnand" class="text-text-secondary hover:text-text-primary" target="_blank"
+          rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-github">
+              <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+          </svg>
+      </a>
+  </div>
+</section>
 
-        {{ if .Content }}
-            <div class="content">{{ .Content }}</div>
-        {{ end }}
+<section id="projects" class="container mx-auto md:px-0">
+  <h2 class="text-3xl font-bold mb-8 text-center font-mono">Projects</h2>
+</section>
 
-        {{ range $paginator.Pages.GroupByDate "2006" }}
-            <div class="posts-group">
-                <div class="post-year">{{ .Key }}</div>
-
-                <ul class="posts-list">
-                    {{ range .Pages }}
-                        <li class="post-item">
-                            <a href="{{.Permalink}}" class="post-item-inner">
-                                <span class="post-title">{{.Title}}</span>
-                                <span class="post-day">
-                                    {{ if .Site.Params.dateformShort }}
-                                        {{ time.Format .Site.Params.dateformShort .Date }}
-                                    {{ else }}
-                                        {{ time.Format "Jan 2" .Date }}
-                                    {{ end }}
-                                </span>
-                            </a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-        {{ end }}
-    {{ partial "pagination-list.html" . }}
-    </main>
+<section id="contact" class="container mx-auto py-8">
+  <h2 class="text-3xl font-bold mb-8 text-center font-mono">Contact</h2>
+  <div class="max-w-md mx-auto">
+      <p class="mb-4 text-center">Feel free to reach out!</p>
+      <div class="text-center">
+          <a href="mailto:abhiramvanand@gmail.com" class="text-blue-500 hover:underline">abhiramvanand@gmail.com</a>
+      </div>
+  </div>
+</section>
 {{ end }}
