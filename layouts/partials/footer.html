@@ -1,0 +1,18 @@
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-text">&copy; {{ now.Year }} {{ .Site.Title }}. Built with Hugo.</p>
+        <ul class="footer-links">
+            {{ if .Site.Params.github }}
+            <li><a href="https://github.com/{{ .Site.Params.github }}" target="_blank" rel="noopener">GitHub</a></li>
+            {{ end }}
+            {{ if .Site.Params.linkedin }}
+            <li><a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank"
+                    rel="noopener">LinkedIn</a></li>
+            {{ end }}
+            <li><a href="mailto:{{ .Site.Params.email }}">Email</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<main>
+    <section class="hero">
+        <h1 class="hero-title">Hi I'm, {{ .Site.Params.author }}</h1>
+        <p class="hero-subtitle">{{ .Site.Params.role }}</p>
+        <p class="hero-description">{{ .Site.Params.description }}</p>
+        <div class="hero-links">
+            <a href="/projects/">View Projects</a>
+            <a href="/blog/">Read Writing</a>
+            <a href="mailto:{{ .Site.Params.email }}">Get in Touch</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recent Projects</h2>
+            </div>
+
+            <div class="card-list">
+                {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
+                <article class="card">
+                    <h3 class="card-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    {{ if .Date }}
+                    <div class="card-meta">{{ .Date.Format "2006" }}</div>
+                    {{ end }}
+                    <p class="card-description">{{ .Summary }}</p>
+                </article>
+                {{ end }}
+            </div>
+
+            <p style="margin-top: var(--spacing-lg);">
+                <a href="/projects/">View all projects →</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recent Writing</h2>
+            </div>
+
+            <ul class="post-list">
+                {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+                <article class="card">
+                    <h3 class="post-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    <div class="post-meta">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</div>
+                    <p class="post-excerpt">{{ .Summary }}</p>
+                </article>
+                {{ end }}
+            </ul>
+
+            <p style="margin-top: var(--spacing-lg);">
+                <a href="/blog/">View all posts →</a>
+            </p>
+        </div>
+    </section>
+</main>
+
+{{ partial "footer.html" . }}

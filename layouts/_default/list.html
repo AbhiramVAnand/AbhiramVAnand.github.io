@@ -1,0 +1,43 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<main class="section">
+    <div class="container">
+        <header class="section-header">
+            <h1 class="section-title">{{ .Title }}</h1>
+            {{ if .Description }}
+            <p class="section-subtitle">{{ .Description }}</p>
+            {{ end }}
+        </header>
+
+        {{ if eq .Section "blog" }}
+        <ul class="post-list">
+            {{ range .Pages }}
+            <article class="card">
+                <h2 class="post-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                <div class="post-meta">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</div>
+                <p class="post-excerpt">{{ .Summary }}</p>
+            </article>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <div class="card-list">
+            {{ range .Pages }}
+            <article class="card">
+                <h2 class="card-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                {{ if .Date }}
+                <div class="card-meta">{{ .Date.Format "2006" }}</div>
+                {{ end }}
+                <p class="card-description">{{ .Summary }}</p>
+            </article>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

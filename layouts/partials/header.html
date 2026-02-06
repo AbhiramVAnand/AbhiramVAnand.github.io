@@ -1,0 +1,35 @@
+<header class="header">
+    <nav class="nav-container">
+        <a href="/" class="logo">{{ .Site.Title }}</a>
+
+        <ul class="nav-menu" id="navMenu">
+            {{ range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL }}" class="nav-link {{ if $.IsMenuCurrent " main" . }}active{{ end }}">
+                    {{ .Name }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.nav-container')) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
+</script>
