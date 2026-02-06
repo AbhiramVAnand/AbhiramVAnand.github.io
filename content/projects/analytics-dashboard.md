@@ -14,7 +14,6 @@ A powerful analytics dashboard that transforms complex data into actionable insi
 - **Real-time Data**: Live updates and streaming data
 - **Custom Visualizations**: Interactive charts and graphs
 - **Advanced Filtering**: Drill down into specific metrics
-- **Export Capabilities**: PDF and CSV reports
 - **Role-based Access**: Secure data management
 
 ## Technologies Used
