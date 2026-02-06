@@ -28,6 +28,6 @@ I believe in:
 
 ## Contact
 
-The best way to reach me is via email at [{{ .Site.Params.email }}](mailto:{{ .Site.Params.email }}).
+The best way to reach me is via email at [abhiramvanand@gmail.com](mailto:abhiramvanand@gmail.com).
 
-You can also find me on [GitHub](https://github.com/{{ .Site.Params.github }}) and [LinkedIn](https://linkedin.com/in/{{ .Site.Params.linkedin }}).
+You can also find me on [GitHub](https://github.com/AbhiramVAnand) and [LinkedIn](https://linkedin.com/in/abhiramvanand).
